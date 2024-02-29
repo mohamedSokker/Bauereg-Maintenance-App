@@ -36,6 +36,4 @@ yarn-error.*
 
 .env
 AppleCredentaials.txt
-eas.json
 google-services.json
-GoogleService-Info.plist
