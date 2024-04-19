@@ -1,0 +1,63 @@
+export default {
+  expo: {
+    name: "BauerEg",
+    slug: "BauerEg",
+    version: "4.0.3",
+    orientation: "portrait",
+    icon: "./assets/icon.png",
+    userInterfaceStyle: "light",
+    splash: {
+      image: "./assets/splash.png",
+      resizeMode: "contain",
+      backgroundColor: "#ffffff",
+    },
+    assetBundlePatterns: ["**/*"],
+    ios: {
+      supportsTablet: true,
+      bundleIdentifier: "com.mohamedsokker.MaintenanceApp",
+      googleServicesFile: process.env.apple_config,
+      infoPlist: {
+        UIBackgroundModes: ["fetch", "remote-notification"],
+      },
+    },
+    android: {
+      versionCode: 7,
+      adaptiveIcon: {
+        googleServicesFile: process.env.android_config,
+        foregroundImage: "./assets/adaptive-icon.png",
+        backgroundColor: "#ffffff",
+      },
+      package: "com.mohamed_sokker.MaintenanceApp",
+      googleServicesFile: "./google-services.json",
+      permissions: [
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO",
+      ],
+    },
+    plugins: [
+      "@react-native-firebase/app",
+      [
+        "expo-build-properties",
+        {
+          ios: {
+            useFrameworks: "static",
+          },
+        },
+      ],
+      [
+        "expo-camera",
+        {
+          cameraPermission: "Allow $(PRODUCT_NAME) to access your camera.",
+        },
+      ],
+    ],
+    web: {
+      favicon: "./assets/favicon.png",
+    },
+    extra: {
+      eas: {
+        projectId: "5c8d2ed7-a4e9-4b07-a3ed-6eb90a847b48",
+      },
+    },
+  },
+};

@@ -27,7 +27,11 @@
         "backgroundColor": "#ffffff"
       },
       "package": "com.mohamed_sokker.MaintenanceApp",
-      "googleServicesFile": "./google-services.json"
+      "googleServicesFile": "./google-services.json",
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO"
+      ]
     },
     "plugins": [
       "@react-native-firebase/app",
