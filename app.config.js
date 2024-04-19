@@ -23,12 +23,11 @@ export default {
     android: {
       versionCode: 7,
       adaptiveIcon: {
-        googleServicesFile: process.env.android_config,
         foregroundImage: "./assets/adaptive-icon.png",
         backgroundColor: "#ffffff",
       },
       package: "com.mohamed_sokker.MaintenanceApp",
-      googleServicesFile: "./google-services.json",
+      googleServicesFile: process.env.android_config,
       permissions: [
         "android.permission.CAMERA",
         "android.permission.RECORD_AUDIO",
